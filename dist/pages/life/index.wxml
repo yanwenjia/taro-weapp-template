@@ -1,0 +1,4 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="index"><text>生活服务</text>
+    </view>
+</block>
