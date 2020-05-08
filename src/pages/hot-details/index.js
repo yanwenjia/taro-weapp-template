@@ -51,7 +51,7 @@ export default class Index extends Component {
     }
     render() {
         return (
-        <View className='home'>
+        <View className='details-container'>
             {/* <ToWxml nodes={this.state.content} /> */}
             <import src='../../wxParse/wxParse.wxml' />
             <template is='wxParse' data='{{wxParseData:article.nodes}}' />
