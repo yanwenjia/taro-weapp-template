@@ -1,4 +1,5 @@
 <block wx:if="{{$taroCompReady}}">
-    <view class="index"><text>Hello world!</text>
-    </view>
+    <scroll-view>
+        <list-item wx:key="id" wx:for="{{loopArray1}}" wx:for-item="story" wx:for-index="_anonIdx2" compid="{{story.$compid__1}}"></list-item>
+    </scroll-view>
 </block>

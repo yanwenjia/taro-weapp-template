@@ -1,28 +1,60 @@
 import Taro, { Component } from '@tarojs/taro'
-import { View, Text } from '@tarojs/components'
-import './index.scss'
+import { ScrollView } from '@tarojs/components'
+import { netGetLatest } from '@/api/index'
+import ListItem from './components/ListItem'
+
 
 export default class Index extends Component {
+  state={
+    stories:[]
+  }
 
   componentWillMount () { }
 
-  componentDidMount () { }
+  componentDidMount () { 
+    this.getData()
+  }
 
   componentWillUnmount () { }
 
   componentDidShow () { }
 
   componentDidHide () { }
-
-  config = {
-    navigationBarTitleText: '首页'
+  getData(){
+    netGetLatest()
+    .then((res)=>{
+      console.log(res)
+      const {stories} = res
+      this.setState({
+        stories
+      })
+    }).catch((err)=>{
+      console.log(err)
+    })
   }
-
+  toDetails(){
+    console.log('去详情')
+  }
+  config = {
+    navigationBarTitleText: '热点'
+  }
   render () {
     return (
-      <View className='index'>
-        <Text>Hello world!</Text>
-      </View>
+      <ScrollView>
+        {
+          this.state.stories.map(story=>{
+            return (
+              <ListItem 
+                key={story.id}
+                title={story.title}
+                img={story.images[0]}
+                hint={story.hint}
+                detailsId={story.id}
+              />
+            )
+          })
+        }
+      </ScrollView>
     )
   }
 }

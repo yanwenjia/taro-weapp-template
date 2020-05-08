@@ -1,1 +1,1 @@
-{"usingComponents":{},"navigationBarTitleText":"首页"}
+{"usingComponents":{"list-item":"./components/ListItem/index"},"navigationBarTitleText":"热点"}

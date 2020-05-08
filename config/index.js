@@ -1,3 +1,5 @@
+const path = require('path')
+
 const config = {
   projectName: 'wx',
   date: '2020-5-6',
@@ -6,6 +8,15 @@ const config = {
     '640': 2.34 / 2,
     '750': 1,
     '828': 1.81 / 2
+  },
+  copy: {
+    patterns: [
+    { from: 'src/wxParse/wxParse.wxss', to: 'dist/wxParse/wxParse.wxss'},
+    { from: 'src/wxParse/wxParse.wxml', to: 'dist/wxParse/wxParse.wxml'}
+    ],
+  },
+  alias: {
+    '@': path.resolve(__dirname, '..', 'src'),
   },
   sourceRoot: 'src',
   outputRoot: 'dist',

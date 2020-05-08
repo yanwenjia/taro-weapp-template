@@ -1,0 +1,26 @@
+.hot-item{
+    display: flex;
+    padding: 0 20px;
+    border-bottom: 20px solid #eeeeee;
+    .img{
+        width: 200px;
+        height: 200px;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+    .text{
+        padding:10px 0 10px 20px;
+        line-height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .title{
+        display:block;
+    }
+    .hint{
+        display:block;
+        color: #aaa;
+        font-size: 24px;
+    }
+}

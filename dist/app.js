@@ -1,4 +1,5 @@
 require("./runtime");
+require("./common");
 require("./vendors");
 
 (wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([["app"],{
@@ -54,7 +55,7 @@ var _App = function (_BaseComponent) {
     }
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = _App.__proto__ || Object.getPrototypeOf(_App)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
-      pages: ['pages/index/index', "pages/life/index"],
+      pages: ['pages/index/index', "pages/life/index", "pages/hot-details/index"],
       window: {
         backgroundTextStyle: 'light',
         navigationBarBackgroundColor: '#fff',
@@ -64,10 +65,14 @@ var _App = function (_BaseComponent) {
       tabBar: {
         "list": [{
           "pagePath": "pages/index/index",
-          "text": "首页"
+          "text": "热点",
+          "iconPath": "./img/tabs/hot1.png",
+          "selectedIconPath": "./img/tabs/hot2.png"
         }, {
           "pagePath": "pages/life/index",
-          "text": "生活"
+          "text": "生活",
+          "iconPath": "./img/tabs/hot1.png",
+          "selectedIconPath": "./img/tabs/hot2.png"
         }]
 
         // 在 App 类中的 render() 函数没有实际作用

@@ -22,7 +22,8 @@ class App extends Component {
   config = {
     pages: [
       'pages/index/index',
-      "pages/life/index"
+      "pages/life/index",
+      "pages/hot-details/index"
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -33,11 +34,15 @@ class App extends Component {
     tabBar: {
       "list": [{
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "热点",
+        "iconPath": "./img/tabs/hot1.png",
+        "selectedIconPath": "./img/tabs/hot2.png"
       },
       {
         "pagePath": "pages/life/index",
-        "text": "生活"
+        "text": "生活",
+        "iconPath": "./img/tabs/hot1.png",
+        "selectedIconPath": "./img/tabs/hot2.png"
       }]
     }
   }
