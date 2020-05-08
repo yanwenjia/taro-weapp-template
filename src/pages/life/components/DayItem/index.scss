@@ -1,16 +1,15 @@
-.weather-now{
+.weather-day{
     // display: flex;
     background-color: #eeeeee;
     padding: 10px;
+    margin-top: 20px;
     .item{
         display: flex;
         justify-content:space-between;
         align-items:center;
-        .tmp{
-            font-size: 80px;
-        }
-        .cond_txt{
-            font-size: 40px;
+        line-height: 60px;
+        .date{
+            font-weight: bolder;
         }
     }
     .icon{

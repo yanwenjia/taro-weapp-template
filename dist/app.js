@@ -56,6 +56,11 @@ var _App = function (_BaseComponent) {
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = _App.__proto__ || Object.getPrototypeOf(_App)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
       pages: ['pages/index/index', "pages/life/index", "pages/hot-details/index"],
+      "permission": {
+        "scope.userLocation": {
+          "desc": "你的位置信息将用于获取当前城市信息" // 高速公路行驶持续后台定位
+        }
+      },
       window: {
         backgroundTextStyle: 'light',
         navigationBarBackgroundColor: '#fff',
@@ -70,14 +75,12 @@ var _App = function (_BaseComponent) {
           "selectedIconPath": "./img/tabs/hot2.png"
         }, {
           "pagePath": "pages/life/index",
-          "text": "生活",
-          "iconPath": "./img/tabs/hot1.png",
-          "selectedIconPath": "./img/tabs/hot2.png"
+          "text": "天气",
+          "iconPath": "./img/tabs/w1.png",
+          "selectedIconPath": "./img/tabs/w2.png"
         }]
-
-        // 在 App 类中的 render() 函数没有实际作用
-        // 请勿修改此函数
-      } }, _temp), _possibleConstructorReturn(_this, _ret);
+      }
+    }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(_App, [{
@@ -94,6 +97,10 @@ var _App = function (_BaseComponent) {
     value: function componentDidCatchError() {}
   }, {
     key: '_createData',
+
+
+    // 在 App 类中的 render() 函数没有实际作用
+    // 请勿修改此函数
     value: function _createData() {}
   }]);
 

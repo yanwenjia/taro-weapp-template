@@ -4,7 +4,7 @@ import './index.scss'
 
 export default class Index extends Component {
     toDetails(){
-        Taro.navigateTo({url: '/pages/hot-details/index?id='+this.props.detailsId})
+        Taro.navigateTo({url: `/pages/hot-details/index?id=${this.props.detailsId}&title=${this.props.title}`})
     }
     render() {
         return (

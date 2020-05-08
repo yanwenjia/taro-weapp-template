@@ -50,7 +50,7 @@ var Index = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray1", "stories"], _this.state = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray2", "stories"], _this.state = {
       stories: []
     }, _this.config = {
       navigationBarTitleText: '热点'
@@ -111,30 +111,30 @@ var Index = (_temp2 = _class = function (_BaseComponent) {
       var __prefix = this.$prefix;
       ;
 
-      var loopArray1 = this.__state.stories.map(function (story, _anonIdx) {
+      var loopArray2 = this.__state.stories.map(function (story, _anonIdx) {
         story = {
           $original: (0, _taroWeapp.internal_get_original)(story)
         };
 
-        var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "bzzzzzzzzz" + _anonIdx, true),
+        var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "czzzzzzzzz" + _anonIdx, true),
             _genCompid2 = _slicedToArray(_genCompid, 2),
-            $prevCompid__1 = _genCompid2[0],
-            $compid__1 = _genCompid2[1];
+            $prevCompid__2 = _genCompid2[0],
+            $compid__2 = _genCompid2[1];
 
         _taroWeapp.propsManager.set({
           "title": story.$original.title,
           "img": story.$original.images[0],
           "hint": story.$original.hint,
           "detailsId": story.$original.id
-        }, $compid__1, $prevCompid__1);
+        }, $compid__2, $prevCompid__2);
         return {
-          $compid__1: $compid__1,
+          $compid__2: $compid__2,
           $original: story.$original
         };
       });
 
       Object.assign(this.__state, {
-        loopArray1: loopArray1
+        loopArray2: loopArray2
       });
       return this.__state;
     }
