@@ -39,6 +39,9 @@ export default class Index extends Component {
     navigationBarTitleText: '热点'
   }
   render () {
+    if (!this.state.stories.length){
+      return null
+    }
     return (
       <ScrollView>
         {
