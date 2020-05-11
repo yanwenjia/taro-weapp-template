@@ -1,0 +1,10 @@
+.snake{
+    background:yellow;
+    position:absolute;
+    z-index: 2;
+}
+.food{
+    background:green;
+    position:absolute;
+    z-index: 1;
+}

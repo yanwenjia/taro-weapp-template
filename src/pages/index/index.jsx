@@ -24,9 +24,9 @@ export default class Index extends Component {
     netGetLatest()
     .then((res)=>{
       console.log(res)
-      const {stories} = res
+      const {stories,top_stories} = res
       this.setState({
-        stories
+        stories:stories.concat(top_stories)
       })
     }).catch((err)=>{
       console.log(err)
@@ -50,7 +50,7 @@ export default class Index extends Component {
               <ListItem 
                 key={story.id}
                 title={story.title}
-                img={story.images[0]}
+                img={story.images?story.images[0]: story.image}
                 hint={story.hint}
                 detailsId={story.id}
               />

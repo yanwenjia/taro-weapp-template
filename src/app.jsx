@@ -23,7 +23,8 @@ class App extends Component {
     pages: [
       'pages/index/index',
       "pages/life/index",
-      "pages/hot-details/index"
+      "pages/hot-details/index",
+      "pages/game/index"
     ],
     "permission": {
       "scope.userLocation": {
@@ -48,6 +49,12 @@ class App extends Component {
         "text": "天气",
         "iconPath": "./img/tabs/w1.png",
         "selectedIconPath": "./img/tabs/w2.png"
+      },
+      {
+        "pagePath": "pages/game/index",
+        "text": "游戏",
+        "iconPath": "./img/tabs/g1.png",
+        "selectedIconPath": "./img/tabs/g2.png"
       }]
     }
   }
